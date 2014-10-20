@@ -1,8 +1,8 @@
 <?php
 
 // Project constants
-define('PROJECT_NAME', 'halo');
-define('DEFAULT_CONTROLLER', 'welcome');
+define('PROJECT_NAME', 'Atomic-AD');
+define('DEFAULT_CONTROLLER', 'home');
 define('DEBUG', false);
 
 // Load app
