@@ -63,6 +63,36 @@
 	<!-- Main component for a primary marketing message or call to action -->
 	<? if( !file_exists("views/$controller/{$controller}_$action.php")) error_out('The view <i>views/'. $controller . '/' .  $controller . '_' . $action . '.php</i> does not exist. Create that file.');?>
     <?  @require "views/$controller/{$controller}_$action.php"; ?>
+    <footer>
+        <div class="row">
+          <div class="col-md-4">
+            <ul>
+                <li><b>Atomic AD OÜ</b></li>
+                <li>Atomic AD OÜ</li>
+                <li>Atomic AD OÜ</li>
+                <li>Atomic AD OÜ</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+            <ul>
+                <li class="active"><a href="#">Avaleht</a></li>
+                <li><a href="#services">Teenused</a></li>
+                <li><a href="#portfolio">Tehtud tööd</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+
+            </ul>
+        </div>
+            </div>
+
+        <div class="row">
+            <div class="col-md-4">
+            <p>copyright, dont steal, i will find you!</p>
+        </div>
+        </div>
+    </footer>
 
 </div> <!-- /container -->
 
