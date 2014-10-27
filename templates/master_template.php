@@ -60,7 +60,7 @@
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
                                     <li class="active"><a href="#">Avaleht</a></li>
-                                    <li><a href="#services">Teenused</a></li>
+                                    <li><a href="services">Teenused</a></li>
                                     <li><a href="#portfolio">Tehtud tööd</a></li>
                                     <li><a href="#contact">Kontakt</a></li>
                                 </ul>
