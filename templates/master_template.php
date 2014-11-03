@@ -15,6 +15,8 @@
     <!-- Bootstrap core CSS -->
     <link href="assets/components/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="assets/css/style.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <style>
         body {
@@ -59,10 +61,10 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a href="#">Avaleht</a></li>
+                                    <li class="active"><a href="home">Avaleht</a></li>
                                     <li><a href="services">Teenused</a></li>
-                                    <li><a href="#portfolio">Tehtud tööd</a></li>
-                                    <li><a href="#contact">Kontakt</a></li>
+                                    <li><a href="portfolio">Tehtud tööd</a></li>
+                                    <li><a href="contact">Kontakt</a></li>
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->
@@ -78,8 +80,10 @@
                 <div class="row">
                     <footer>
                             <div class="col-md-4">
-                                <h1>Atomic AD</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor doloremque est laborum nam quo reiciendis rem, sint veniam voluptates!</p>
+                                <span><b>Atomic AD OÜ</b></span><br/>
+                                <span>Tondi 1, Tallinn, Harjumaa, 1313</span><br/>
+                                <span>atomic@atomic.ee</span><br/>
+                                <span>+372 6418 495</span>
                             </div>
                             <div class="col-md-4">
                                 <ul class="nav navbar-nav">
@@ -90,7 +94,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-4">
-                                <p class="help-block">Copyright blabla</p>
+                                <p class="help-block">©Copyright Atomic AD OÜ 2014</p>
                         </div>
                     </footer>
                 </div>
