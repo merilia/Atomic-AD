@@ -1,149 +1,79 @@
+<style>
+    .modal-dialog {width:600px;}
+    .thumbnail {margin-bottom:6px;}
+</style>
 
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-
-<div class="container" style="margin:0 auto; max-width:1000px">
-
-    <!-- Page Header -->
+<div class="container" style="max-width:1000px">
     <div class="row">
-        <div class="col-md-12">
-            <h1 class="page-header">Tehtud tööd <br/>
-                <small>Klõpsa pildile, et näha seda suuremalt!</small>
-            </h1>
+        <h1>Tehtud tööd</h1>
+        <h2>Klõpsa pildile, et näha seda suuremalt!</h2>
+        <div class="row">
+            <div class="col-md-12" style="margin:0 auto">
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 1"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 2"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 3"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 4"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 5"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 6"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 8"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 9"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 10"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 11"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 12"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+            <div class="col-lg-3 col-sm-4 col-6"><a href="#" title="Image 13"><img src="//placehold.it/700x400" class="thumbnail img-responsive"></a></div>
+        </div>
         </div>
     </div>
-    <!-- /.row -->
-
-    <!-- Projects Row -->
-    <div class="row">
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Projekt</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Projekt</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Projekt</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-    </div>
-    <!-- /.row -->
-
-    <!-- Projects Row -->
-    <div class="row">
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Projekt</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Projekt</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Projekt</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-    </div>
-
-    <!-- Projects Row -->
-    <div class="row">
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Projekt</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Projekt</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Projekt</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-    </div>
-    <!-- /.row -->
-
-    <hr>
-
-    <!-- Pagination -->
-    <div class="row text-center">
-        <div class="col-md-12">
-            <ul class="pagination">
-                <li>
-                    <a href="#">&laquo;</a>
-                </li>
-                <li class="active">
-                    <a href="#">1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li>
-                    <a href="#">3</a>
-                </li>
-                <li>
-                    <a href="#">&raquo;</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- /.row -->
-
-    <hr>
-
 </div>
-<!-- /.container -->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h3 class="modal-title">Heading</h3>
+            </div>
+            <div class="modal-body">
 
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.thumbnail').click(function(){
+        $('.modal-body').empty();
+        var title = $(this).parent('a').attr("title");
+        $('.modal-title').html(title);
+        $($(this).parents('div').html()).appendTo('.modal-body');
+        $('#myModal').modal({show:true});
+        return false;
+    });
+</script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<div class="col-md-6">
+    <span class="lead">Laadi üles:</span>
+    <div class="pull-right">
+        <div class="btn-group btn-group-lg">
+            <button type="button" class="btn btn-default" id="btn-photo-upload">Lisa fail...</button>
+        </div>
+    </div>
+    <form id="uploadForm" method="post" enctype="multipart/form-data" style=" display: none">
+        <input type="file" name="photo" id="text-photo-upload" class="file-upload"/>
+    </form>
+    <pre>
+    <?php var_dump($_FILES) ?>
+    <?php var_dump(get_defined_vars()) ?>
+    </pre>
+    <script>
+        $('#btn-photo-upload').click(function (event) {
+            $('#text-photo-upload').click();
+        });
+        //capture selected filename
+        $('#text-photo-upload').change(function (click) {
+//  $('#file-name').val(this.value);
+            $('form#uploadForm').submit();
+        });
+    </script>
+</div>

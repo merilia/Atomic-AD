@@ -1,4 +1,4 @@
-<link href="assets/css/style.css" rel="stylesheet">
+
 
 <div class="row">
     <div class="col-md-6">
@@ -14,7 +14,11 @@
         <form role="form">
             <div class="form-group">
                 <label for="exampleInputName">Nimi *</label>
-                <input type="email" class="form-control" id="exampleInputName" placeholder="Sinu nimi...">
+                <input type="text" class="form-control" id="exampleInputName" placeholder="Sinu nimi...">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail">Email *</label>
+                <input type="email" class="form-control" id="exampleInputName" placeholder="Sinu email...">
             </div>
             <div class="form-group">
                 <label for="exampleInputNumber">Telefoninumber *</label>

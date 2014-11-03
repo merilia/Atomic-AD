@@ -15,7 +15,6 @@
     <!-- Bootstrap core CSS -->
     <link href="assets/components/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <style>
@@ -61,11 +60,16 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a href="home">Avaleht</a></li>
-                                    <li><a href="services">Teenused</a></li>
-                                    <li><a href="portfolio">Tehtud tööd</a></li>
-                                    <li><a href="contact">Kontakt</a></li>
+                                    <li <?= $controller=="home"?'class="active"':"" ?>><a href="home">Avaleht</a></li>
+                                    <li <?= $controller=="services"?'class="active"':"" ?>><a href="services">Teenused</a></li>
+                                    <li <?= $controller=="portfolio"?'class="active"':"" ?>><a href="portfolio">Tehtud tööd</a></li>
+                                    <li <?= $controller=="contact"?'class="active"':"" ?>><a href="contact">Kontakt</a></li>
                                 </ul>
+                                <?php if($auth->logged_in):?>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="<?=BASE_URL?><?= $auth->logged_in == true? 'logout' : 'login'?>"><?= $auth->logged_in == true? 'Logout' : 'Login'?></a></li>
+                                </ul>
+                                <?php endif ?>
                             </div>
                             <!-- /.navbar-collapse -->
                         </div>
