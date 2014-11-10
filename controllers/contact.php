@@ -5,7 +5,6 @@ class contact extends Controller
 {
     function index_post()
     {
-        var_dump($_POST);
         $data = $_POST['data'];
         $message = '<pre>' . print_r($data, 1) . '<pre>';
         $message .= $data['email_message'];

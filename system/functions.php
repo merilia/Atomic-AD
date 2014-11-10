@@ -5,19 +5,19 @@
  */
 function error_out($error_file_name_or_msg)
 {
-	if (!file_exists("views/errors/{$error_file_name_or_msg}_error_view.php")) {
-		$errors[] = $error_file_name_or_msg;
-	}
-	require dirname(__FILE__) . '/../templates/error_template.php';
-	exit();
+    if (!file_exists("views/errors/{$error_file_name_or_msg}_error_view.php")) {
+        $errors[] = $error_file_name_or_msg;
+    }
+    require dirname(__FILE__) . '/../templates/error_template.php';
+    exit();
 }
 
 function __autoload($className)
 {
-	(include dirname(__FILE__) . '/classes/' . $className . '.php') or
-	(include dirname(__FILE__) . '/../../classes'  . $className . '.php') or
-	(error_out("Autoload of class $className failed."));
-	debug("Autoloaded " . $className);
+    (include dirname(__FILE__) . '/classes/' . $className . '.php') or
+    (include dirname(__FILE__) . '/../../classes' . $className . '.php') or
+    (error_out("Autoload of class $className failed."));
+    debug("Autoloaded " . $className);
 }
 
 /**
@@ -26,13 +26,13 @@ function __autoload($className)
  */
 function __($text)
 {
-	//TODO: Write your own translation code here
-	echo $text;
+    //TODO: Write your own translation code here
+    echo $text;
 }
 
 function debug($msg)
 {
-	if (defined(DEBUG) and DEBUG == true){
+    if (defined(DEBUG) and DEBUG == true) {
         echo "<br>\n";
         $file = debug_backtrace()[0]['file'];
         $line = debug_backtrace()[0]['line'];
@@ -59,7 +59,7 @@ function send_mail($to_address, $to_name, $reply_address, $reply_name, $subject,
             throw new phpmailerAppException("Email address " . $to_address . " is invalid -- aborting!");
         }
         $mail->isSMTP();
-        $mail->SMTPDebug = 0;
+        $mail->SMTPDebug = 2;
         $mail->Host = "smtp.gmail.com";
         $mail->Port = EMAIL_PORT;
         $mail->SMTPSecure = EMAIL_SSL ? "ssl" : false;
@@ -77,16 +77,15 @@ function send_mail($to_address, $to_name, $reply_address, $reply_name, $subject,
 
         try {
             $mail->send();
-            $results_messages[] = "Message has been sent using SMTP";
+            $results_messages[] = "Teie kiri on saadetud!";
         } catch (phpmailerException $e) {
-            throw new phpmailerAppException('Unable to send to: ' . $to_address . ': ' . $e->getMessage());
+            throw new phpmailerAppException('Kirja saatmine ebaõnnestus aadressile: ' . $to_address . ': ' . $e->getMessage());
         }
     } catch (phpmailerAppException $e) {
         $results_messages[] = $e->errorMessage();
     }
 
     if (count($results_messages) > 0) {
-        echo "<h2>Run results</h2>\n";
         echo "<ul>\n";
         foreach ($results_messages as $result) {
             echo "<li>$result</li>\n";
