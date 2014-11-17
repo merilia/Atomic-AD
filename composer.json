@@ -1,0 +1,12 @@
+{
+    "name": "Merili/atomic-ad",
+    "description": "description_text",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Merili",
+            "email": "meriliasu@gmail.com"
+        }
+    ]
+}

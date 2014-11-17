@@ -10,7 +10,6 @@ $mail->CharSet = 'utf-8';
 class phpmailerAppException extends phpmailerException {}
 
 try {
-$to = 'meriliasu@gmail.com';
 if(!PHPMailer::validateAddress($to)) {
 throw new phpmailerAppException("Email address " . $to . " is invalid -- aborting!");
 }
