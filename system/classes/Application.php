@@ -132,7 +132,7 @@ class Application
 
         // Allow shorter URLs (users/view/3 becomes users/3)
         if (is_numeric($this->action)) {
-
+            print_r($this);
             // Prepend the number in action to params array
             array_unshift($this->params, $this->action);
 
