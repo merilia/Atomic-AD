@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Loomise aeg: Nov 17, 2014 kell 01:03 PM
+-- Loomise aeg: Jaan 14, 2015 kell 03:50 PM
 -- Serveri versioon: 5.5.39
 -- PHP versioon: 5.4.31
 
@@ -18,6 +18,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Tabeli struktuur tabelile `client`
+--
+
+DROP TABLE IF EXISTS `client`;
+CREATE TABLE IF NOT EXISTS `client` (
+`client_id` int(10) unsigned NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `address` varchar(150) NOT NULL,
+  `client_since` date NOT NULL,
+  `project_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Tabeli struktuur tabelile `project`
 --
 
@@ -26,19 +41,7 @@ CREATE TABLE IF NOT EXISTS `project` (
 `project_id` int(10) unsigned NOT NULL,
   `project_name` varchar(255) NOT NULL,
   `project_file` varchar(255) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=7 ;
-
---
--- Andmete tõmmistamine tabelile `project`
---
-
-INSERT INTO `project` (`project_id`, `project_name`, `project_file`) VALUES
-(1, 'afadg', 'insta.jpg'),
-(2, 'asfafs', 'insta.jpg'),
-(3, '', 'insta.jpg'),
-(4, 'sdad', 'insta.jpg'),
-(5, 'mypictr_last.fm.jpg', 'mypictr_last.fm.jpg'),
-(6, 'asdasd', 'alicerules instagram.PNG');
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=23 ;
 
 -- --------------------------------------------------------
 
@@ -55,18 +58,26 @@ CREATE TABLE IF NOT EXISTS `user` (
   `active` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `email` varchar(255) NOT NULL,
   `deleted` tinyint(1) unsigned NOT NULL DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Andmete tõmmistamine tabelile `user`
 --
 
 INSERT INTO `user` (`user_id`, `username`, `is_admin`, `password`, `active`, `email`, `deleted`) VALUES
-(1, 'demo', 0, 'demo', 1, '', 0);
+(1, 'demo', 0, 'demo', 1, '', 0),
+(2, 'admin', 1, 'krista779', 0, 'andrus@atomic.ee', 0),
+(3, 'developer', 1, 'ahjaez3a', 0, 'meriliasu@gmail.com', 0);
 
 --
 -- Indeksid tõmmistatud tabelitele
 --
+
+--
+-- Indeksid tabelile `client`
+--
+ALTER TABLE `client`
+ ADD PRIMARY KEY (`client_id`);
 
 --
 -- Indeksid tabelile `project`
@@ -85,12 +96,17 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT tabelile `client`
+--
+ALTER TABLE `client`
+MODIFY `client_id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT tabelile `project`
 --
 ALTER TABLE `project`
-MODIFY `project_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `project_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT tabelile `user`
 --
 ALTER TABLE `user`
-MODIFY `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;SET FOREIGN_KEY_CHECKS=1;
+MODIFY `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;SET FOREIGN_KEY_CHECKS=1;
