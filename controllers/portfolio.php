@@ -50,4 +50,13 @@ class portfolio extends Controller
         echo $result ? 'Ok' : 'Fail';
         die();
     }
+
+    function delete_ajax()
+    {
+        $project_id = $this->params[0];
+        $result = q("delete from project WHERE project_id={$project_id}");
+        echo $result ? 'Ok' : 'Fail';
+        die();
+    }
+
 }

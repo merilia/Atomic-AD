@@ -50,7 +50,7 @@
         var title = $(this).parent('a').attr("title");
         <? if($auth->logged_in): ?>
         var project_id = $(this).parent('a').attr("data-project_id");
-        $('.modal-title').html('<input type="text" value="' + title + '" id="project_name"/> <button id="asdaf" onclick="change_project_name(' + project_id + ')" style="width:110px; height:40px">Salvesta</button>');
+        $('.modal-title').html('<input type="text" value="' + title + '" id="project_name"/> <button id="asdaf" onclick="change_project_name(' + project_id + ')" style="width:110px; height:40px">Salvesta</button><button id="delete_project" onclick="delete_project(' + project_id + ')" style="width:110px; height:40px">Kustuta</button>');
         <? else: ?>
         $('.modal-title').html(title);
         <? endif ?>
@@ -75,6 +75,30 @@
                 $('#myModal').modal('toggle');
             });
     }
+    function delete_project(project_id) {
+        var project_name = $("#project_name").val();
+        /* $.ajax({
+         type: "POST",
+         url: 'portfolio/' + project_id,
+         data: {'project_name': project_name},
+         success: function(res){
+         console.debug(res);
+         }
+         });
+         */
+        console.log($(this));
+        $.post('portfolio/delete/' + project_id, { project_id: project_id })
+            .done(function (data) {
+                if (data != 'Ok') {
+                    alert(data);
+                }
+                $('#myModal').modal('toggle');
+                $('*[data-project_id="' + project_id + '"]').remove();
+                $(this).parent('div').remove();
+
+            });
+    }
+
 </script>
 <? if ($auth->logged_in): ?>
     <div class="row">
