@@ -1,21 +1,13 @@
 <?php
 
 if (isset($_POST['data'])) {
-    mysql_connect('localhost', 'root', '') or exit(mysql_error());
-    mysql_select_db('atomic2') or exit(mysql_error());
-    foreach ($_POST['data'] as $field => $value) {
-        $data[$field] = mysql_real_escape_string($value);
-    }
-    extract($data);
-    $sql = "INSERT INTO feedback
-                 SET
-                    feedback_first_name='$feedback_first_name',
-                    feedback_last_name='$feedback_last_name',
-                    feedback_phone='$feedback_phone',
-                    feedback_text='$feedback_text'";
-    echo "<pre>$sql</pre>";
-    mysql_query($sql) or exit(mysql_error());
-    mail('meriliasu@gmail.com','Kiri Atomic OÜ veebilehe kontaktvormi kaudu', $sql) or exit('Meili saatmine ebaõnnestus.');
+    $data = $_POST['data'];
+    ob_start();
+    require 'templates/email_template.php';
+    $message = ob_get_contents();
+    ob_end_clean();
+    var_dump($message);
+    send_mail(EMAIL_EMAIL, 'veebiserver', 'noreply@atomic.ee', 'Sellele emailile ei ole võimalik vastata', 'Kiri Atomic OÜ veebilehe kontaktvormi kaudu', $message) or exit('Meili saatmine ebaõnnestus.');
     echo "Täname!";
 }
 
