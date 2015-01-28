@@ -780,7 +780,7 @@ class PHPMailer
      * @access protected
      */
     protected function addAnAddress($kind, $address, $name = '')
-    {var_dump($address, $kind);
+    {
         if (!preg_match('/^(to|cc|bcc|Reply-To)$/', $kind)) {
             $this->setError($this->lang('Invalid recipient array') . ': ' . $kind);
             $this->edebug($this->lang('Invalid recipient array') . ': ' . $kind);

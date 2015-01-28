@@ -59,7 +59,7 @@ function send_mail($to_address, $to_name, $reply_address, $reply_name, $subject,
             throw new phpmailerAppException("Email address " . $to_address . " is invalid -- aborting!");
         }
         $mail->isSMTP();
-        $mail->SMTPDebug = 2;
+        $mail->SMTPDebug = 0;
         $mail->Host = "smtp.gmail.com";
         $mail->Port = EMAIL_PORT;
         $mail->SMTPSecure = EMAIL_SSL ? "ssl" : false;
