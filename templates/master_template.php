@@ -17,10 +17,9 @@
 
 
     <!-- Custom styles for this template -->
+
+    <link rel="stylesheet" href="assets/components/css/style.css"/>
     <style>
-        body {
-            padding-top: 70px;
-        }
     </style>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -91,10 +90,14 @@
                             </div>
                             <div class="col-md-4">
                                 <ul class="nav navbar-nav">
-                                    <span class="active"><a href="#">Avaleht</a></span>
-                                    <span><a href="#services">Teenused</a></span>
-                                    <span><a href="#portfolio">Tehtud tööd</a></span>
-                                    <span><a href="#contact">Kontakt</a></span>
+                                    <li <?= $controller == "home" ? 'class="active"' : "" ?>><a href="home">Avaleht</a>
+                                    </li>
+                                    <li <?= $controller == "services" ? 'class="active"' : "" ?>><a href="services">Teenused</a>
+                                    </li>
+                                    <li <?= $controller == "portfolio" ? 'class="active"' : "" ?>><a href="portfolio">Tehtud
+                                            tööd</a></li>
+                                    <li <?= $controller == "contact" ? 'class="active"' : "" ?>><a href="contact">Kontakt</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="col-md-4">

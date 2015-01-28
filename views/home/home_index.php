@@ -47,10 +47,40 @@
         <h1>Teenused</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor doloremque est laborum nam quo reiciendis rem, sint veniam voluptates!</p>
 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor doloremque est laborum nam quo reiciendis
+            rem, sint veniam voluptates!</p>
+
     </div>
     <div class="col-md-4">
         <h1>Kontakt</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dolor doloremque est laborum nam quo reiciendis rem, sint veniam voluptates!</p>
+        <button type="text" class="btn btn-default pull-right">Kirjuta meile</button>
+        <div class="form_pop">
+            <form role="form" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName">Nimi *</label>
+                    <input type="text" class="form-control" id="exampleInputName" placeholder="Sinu nimi..."
+                           name="data[email_name]">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail">Email *</label>
+                    <input type="email" class="form-control" id="exampleInputName" placeholder="Sinu email..."
+                           name="data[email_email]">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputNumber">Telefoninumber *</label>
+                    <input type="text" class="form-control" id="exampleInputNumber" placeholder="Sinu telefoninumber..."
+                           name="data[email_phone]">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputText">Sõnum *</label>
+                    <input type="text" class="form-control" id="exampleInputText" placeholder="Sinu sõnum..."
+                           style="min-height:100px" name="data[email_message]">
+                </div>
+                <button type="submit" class="btn btn-default">Saada</button>
+            </form>
+        </div>
+
 
     </div>
 </div>
@@ -66,8 +96,15 @@
         <img src="http://placehold.it/150x150" alt="img"/>
     </div>
 </div>
+<style>.contact_form</style>
 <script>
     $('.carousel').carousel({
         interval: 2000
     })
+    $(".contact_form a").click(function () {
+        $(".form-group").toggle("slow", function () {
+        });
+    });
+
+
 </script>
